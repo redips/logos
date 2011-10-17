@@ -1,0 +1,15 @@
+name = Logos
+description = Tema molto figo
+package = Core
+core = 7.x
+
+stylesheets[all][] = css/style.css
+stylesheets[all][] = css/karma-teal-grey.css
+stylesheets-conditional[lte IE 8][all][] = css/lt8.css
+stylesheets-conditional[IE 8][all][] = css/ie8.css
+
+scripts[] = js/jcarousellite_1.0.1.js
+scripts[] = js/karma.js
+scripts[] = js/jquery.cycle.all.min.js
+scripts[] = js/jquery-2-slider.js
+scripts[] = js/testimonial-slider.js

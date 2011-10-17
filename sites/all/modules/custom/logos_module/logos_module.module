@@ -1,0 +1,37 @@
+<?php 
+
+//function test_menu() { //ok
+function logos_module_menu() {
+		//ok
+	$items['logos_module'] = array(
+      'title' => 'Test',
+      'page callback' => 'drupal_get_form',
+  	  'page arguments' => array('_logos_module_form'),
+      'access callback' => true,
+	);
+
+	return $items;
+}
+
+function _logos_module_form() { //ok
+	$form = array();
+
+	$form['nome'] = array(
+    '#title' => t('Pippo'),
+    '#type' => 'textfield',
+    '#required' => true,
+    '#default_value' => 'Luca',
+	);
+
+	$form['submit'] = array(
+      '#type' => 'submit',
+      '#value' => t('Submit'),
+	);
+
+	return $form;
+}
+
+function _logos_module_form_submit($form, &$form_state) { //ok
+	$name = $form_state['values']['nome'];
+	drupal_set_message($name);
+}

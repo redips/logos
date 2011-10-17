@@ -1,0 +1,5 @@
+name = logos_module
+description = Modulo fikissimo per Logos
+core = 7.x
+
+files[] = logos_module.module
